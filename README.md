@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nidan Ayurved
+
+A modern, SEO-optimized, animated, and multilingual website for Nidan Ayurved, built with Next.js, Tailwind CSS, and TypeScript.
+
+## Project Overview
+
+This website showcases Ayurvedic treatments and therapies offered by Nidan Ayurved, with a focus on holistic healing and authentic Ayurvedic practices.
+
+## Features
+
+- 🌐 **Multilingual support** (English, Hindi, Gujarati)
+- 🎨 **Modern, responsive design** with Tailwind CSS
+- ✨ **Smooth animations** with Framer Motion
+- 📱 **Fully responsive** for all device sizes
+- 🔎 **SEO optimized** with proper metadata
+- 📝 **Form handling** with React Hook Form
+- 📧 **Contact form with email notifications** via SMTP
+
+## Tech Stack
+
+- **Next.js 15** with App Router
+- **TypeScript**
+- **Tailwind CSS 3.4.17**
+- **Framer Motion** for animations
+- **React Hook Form** for form handling
+- **Lucide Icons** for UI icons
+- **Nodemailer** for email functionality
+
+## Multilingual Support
+
+- **English** (default): [https://nidanayurved.com/](https://nidanayurved.com/)
+- **Hindi**: [https://nidanayurved.com/hi/](https://nidanayurved.com/hi/)
+- **Gujarati**: [https://nidanayurved.com/gu/](https://nidanayurved.com/gu/)
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables for contact form functionality:
+
+```
+# SMTP Configuration for Contact Form
+EMAIL_HOST=smtp.example.com
+EMAIL_PORT=587
+EMAIL_SECURE=false
+EMAIL_USER=user@example.com
+EMAIL_PASSWORD=your_password_here
+EMAIL_RECIPIENT=contact@nidanayurved.com
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start the production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+/src
+  /app                # Next.js App Router pages
+    /api              # API routes
+      /contact        # Contact form submission endpoint
+  /components         # Reusable UI components
+  /lib                # Utility functions and data
+    /dictionaries     # Translation files
+    /treatments       # Treatment data by language
+  /styles             # Global styles
+/public               # Static assets
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is configured for deployment on Cloudflare.

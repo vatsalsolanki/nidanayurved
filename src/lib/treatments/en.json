@@ -1,0 +1,524 @@
+[
+  {
+    "slug": "panchakarma",
+    "title": "Panchakarma",
+    "shortDescription": "A comprehensive detoxification and rejuvenation program that eliminates toxins and restores balance through five principal therapeutic procedures.",
+    "longDescription": "Panchakarma is a cornerstone of Ayurvedic medicine, designed to remove toxins and restore balance within the body. This intensive cleansing regimen involves five principal procedures that eliminate excess doshas from the body.",
+    "symptoms": [
+      "Chronic fatigue",
+      "Digestive issues",
+      "Skin problems",
+      "Joint pain",
+      "Mental fog"
+    ],
+    "benefits": [
+      "Deep detoxification of the body",
+      "Improved digestion and metabolism",
+      "Enhanced immunity",
+      "Reduced stress and anxiety",
+      "Improved mental clarity"
+    ],
+    "lifestyleTips": [
+      "Follow a light, sattvic diet during treatment",
+      "Avoid cold drinks and foods",
+      "Rest adequately between treatments",
+      "Stay hydrated with warm water",
+      "Avoid strenuous physical activity"
+    ],
+    "image": "/images/treatments/panchakarma.jpg",
+    "categories": ["detoxification", "rejuvenation", "panchakarma"]
+  },
+  {
+    "slug": "abhyanga",
+    "title": "Abhyanga",
+    "shortDescription": "Traditional Ayurvedic oil massage therapy that improves circulation, relieves muscle tension and promotes relaxation and wellbeing.",
+    "longDescription": "Abhyanga is a form of Ayurvedic therapy that involves massage of the body with warm herbal oils. The massage is typically performed by two therapists working in synchrony, who use long, rhythmic strokes to stimulate the body's natural energy flow.",
+    "symptoms": [
+      "Muscle tension",
+      "Stress and anxiety",
+      "Poor circulation",
+      "Dry skin",
+      "Insomnia"
+    ],
+    "benefits": [
+      "Improved circulation and lymphatic drainage",
+      "Reduced muscle tension and pain",
+      "Enhanced skin health and appearance",
+      "Deeper, more restful sleep",
+      "Overall stress reduction"
+    ],
+    "lifestyleTips": [
+      "Take a warm bath after treatment",
+      "Rest for 30 minutes after therapy",
+      "Avoid heavy meals before or immediately after",
+      "Drink plenty of warm water after treatment",
+      "Practice gentle stretching daily"
+    ],
+    "image": "/images/treatments/abhyanga.jpg",
+    "categories": ["painManagement", "stressRelief", "rejuvenation"]
+  },
+  {
+    "slug": "shirodhara",
+    "title": "Shirodhara",
+    "shortDescription": "A soothing therapy where warm oil is poured over the forehead to calm the nervous system and enhance mental clarity.",
+    "longDescription": "Shirodhara is a form of Ayurveda therapy that involves gently pouring warm herbal oil over the forehead, specifically the 'third eye' area. This continuous flow of warm oil on the forehead stimulates the pituitary gland, which helps regulate the entire endocrine system.",
+    "symptoms": [
+      "Anxiety and stress",
+      "Insomnia",
+      "Headaches",
+      "Mental fatigue",
+      "Depression"
+    ],
+    "benefits": [
+      "Deep relaxation of the nervous system",
+      "Improved mental clarity and focus",
+      "Better sleep quality",
+      "Reduced anxiety and stress",
+      "Relief from headaches and migraines"
+    ],
+    "lifestyleTips": [
+      "Avoid excessive mental activity after treatment",
+      "Keep the head warm and protected",
+      "Get extra rest the night of treatment",
+      "Avoid television and digital screens for a few hours after",
+      "Practice meditation daily"
+    ],
+    "image": "/images/treatments/shirodhara.jpg",
+    "categories": ["stressRelief", "painManagement"]
+  },
+  {
+    "slug": "basti",
+    "title": "Basti",
+    "shortDescription": "A therapeutic enema treatment that cleanses and nourishes the colon to improve digestion, eliminate toxins, and balance Vata dosha.",
+    "longDescription": "Basti is one of the most important Panchakarma treatments in Ayurveda, involving the administration of medicated oils or decoctions through the rectum. It directly addresses Vata imbalances, nourishing the colon and eliminating toxins from the large intestine.",
+    "symptoms": [
+      "Constipation",
+      "Digestive disorders",
+      "Lower back pain",
+      "Sciatica",
+      "Arthritis"
+    ],
+    "benefits": [
+      "Deep cleansing of the colon",
+      "Relief from chronic constipation",
+      "Reduced inflammation in joints",
+      "Improved nutrient absorption",
+      "Balance of Vata dosha"
+    ],
+    "lifestyleTips": [
+      "Follow a light diet before and after treatment",
+      "Stay hydrated with warm water",
+      "Avoid strenuous activity for 24 hours",
+      "Keep the abdomen warm",
+      "Rest after treatment"
+    ],
+    "image": "/images/treatments/basti.jpg",
+    "categories": ["detoxification", "panchakarma", "digestiveHealth"]
+  },
+  {
+    "slug": "nasya",
+    "title": "Nasya",
+    "shortDescription": "Nasal administration of herbal oils or powders to clear sinus passages, improve breathing, and enhance mental clarity.",
+    "longDescription": "Nasya is a therapeutic treatment involving the administration of herbal oils, powders, or fresh herbal juices through the nasal passages. It treats disorders of the head, neck, and sensory organs by clearing accumulated toxins and improving oxygen flow to the brain.",
+    "symptoms": [
+      "Sinus congestion",
+      "Headaches",
+      "Allergies",
+      "Memory issues",
+      "Facial paralysis"
+    ],
+    "benefits": [
+      "Cleared nasal passages",
+      "Relief from sinus headaches",
+      "Improved sense of smell",
+      "Enhanced mental clarity",
+      "Better breathing"
+    ],
+    "lifestyleTips": [
+      "Avoid cold foods and beverages after treatment",
+      "Keep the head and neck warm",
+      "Avoid dusty environments",
+      "Practice pranayama (breathing exercises)",
+      "Maintain regular sleep schedule"
+    ],
+    "image": "/images/treatments/nasya.jpg",
+    "categories": ["detoxification", "panchakarma"]
+  },
+  {
+    "slug": "vamana",
+    "title": "Vamana",
+    "shortDescription": "Therapeutic emesis procedure to remove excess Kapha dosha from the respiratory tract and treat conditions like asthma and congestion.",
+    "longDescription": "Vamana is a controlled therapeutic emesis procedure designed to expel excess Kapha dosha from the upper part of the body. It's particularly beneficial for respiratory conditions, skin disorders, and chronic indigestion caused by Kapha imbalance.",
+    "symptoms": [
+      "Asthma",
+      "Bronchitis",
+      "Chronic cough",
+      "Sinus congestion",
+      "Excess mucus"
+    ],
+    "benefits": [
+      "Cleared respiratory passages",
+      "Reduced mucus production",
+      "Improved breathing",
+      "Enhanced digestion",
+      "Balance of Kapha dosha"
+    ],
+    "lifestyleTips": [
+      "Rest completely for 24 hours after treatment",
+      "Follow prescribed dietary regimen",
+      "Avoid cold exposure",
+      "Keep the chest and throat warm",
+      "Practice gentle breathing exercises"
+    ],
+    "image": "/images/treatments/vamana.jpg",
+    "categories": ["detoxification", "panchakarma"]
+  },
+  {
+    "slug": "virechana",
+    "title": "Virechana",
+    "shortDescription": "Therapeutic purgation treatment to remove excess Pitta dosha from the liver and intestines, purifying the blood and clearing toxins.",
+    "longDescription": "Virechana is a controlled purgation therapy designed to eliminate excess Pitta dosha and toxins from the liver, gallbladder, and small intestines. It helps purify the blood and digestive tract, improving skin health and digestive function.",
+    "symptoms": [
+      "Skin disorders",
+      "Acid reflux",
+      "Liver conditions",
+      "Chronic fever",
+      "Burning sensation"
+    ],
+    "benefits": [
+      "Detoxification of the liver",
+      "Improved digestion",
+      "Clearer skin",
+      "Balanced Pitta dosha",
+      "Reduced inflammation"
+    ],
+    "lifestyleTips": [
+      "Rest after treatment",
+      "Follow the prescribed diet plan",
+      "Avoid spicy and acidic foods",
+      "Stay hydrated",
+      "Avoid direct sun exposure"
+    ],
+    "image": "/images/treatments/virechana.jpg",
+    "categories": ["detoxification", "panchakarma", "digestiveHealth"]
+  },
+  {
+    "slug": "udvartana",
+    "title": "Udvartana",
+    "shortDescription": "Invigorating herbal powder massage that exfoliates the skin, improves circulation, and helps in weight management by reducing Kapha.",
+    "longDescription": "Udvartana is a vigorous massage therapy using herbal powders and pastes rubbed onto the skin in the opposite direction of hair growth. It helps reduce excess fat, improve circulation, and provide deep cleansing and exfoliation of the skin.",
+    "symptoms": [
+      "Obesity",
+      "Poor circulation",
+      "Cellulite",
+      "Skin dullness",
+      "Kapha imbalance"
+    ],
+    "benefits": [
+      "Weight management",
+      "Improved skin tone and texture",
+      "Enhanced circulation",
+      "Reduced cellulite",
+      "Increased energy"
+    ],
+    "lifestyleTips": [
+      "Drink warm water throughout the day",
+      "Engage in regular physical activity",
+      "Follow a Kapha-reducing diet",
+      "Avoid daytime sleeping",
+      "Practice dry brushing"
+    ],
+    "image": "/images/treatments/udvartana.jpg",
+    "categories": ["rejuvenation", "skinCare"]
+  },
+  {
+    "slug": "kati-basti",
+    "title": "Kati Basti",
+    "shortDescription": "Specialized treatment for lower back pain where warm medicated oil is pooled over the lumbar region to relieve pain and strengthen the spine.",
+    "longDescription": "Kati Basti is a localized treatment where a dam made from dough is placed on the lower back, and warm medicated oil is pooled within this dam. The oil is retained for a specific time, allowing deep penetration to nourish the tissues and alleviate chronic back pain.",
+    "symptoms": [
+      "Lower back pain",
+      "Sciatica",
+      "Disc issues",
+      "Lumbar stiffness",
+      "Muscle spasms"
+    ],
+    "benefits": [
+      "Relief from back pain",
+      "Improved spinal flexibility",
+      "Reduced muscle tension",
+      "Nourishment of spinal nerves",
+      "Increased mobility"
+    ],
+    "lifestyleTips": [
+      "Maintain proper posture",
+      "Sleep on a firm mattress",
+      "Practice gentle back stretches",
+      "Avoid heavy lifting",
+      "Keep the lower back warm"
+    ],
+    "image": "/images/treatments/kati-basti.jpg",
+    "categories": ["painManagement"]
+  },
+  {
+    "slug": "janu-basti",
+    "title": "Janu Basti",
+    "shortDescription": "Treatment for knee pain and stiffness where warm medicated oil is pooled around the knee joint to reduce inflammation and improve mobility.",
+    "longDescription": "Janu Basti is a specialized treatment where a dam made from dough is built around the knee joint, and warm medicated oil is pooled within this dam. The oil deeply penetrates the joint, reducing inflammation and improving mobility for those suffering from knee pain and arthritis.",
+    "symptoms": [
+      "Knee pain",
+      "Arthritis",
+      "Joint stiffness",
+      "Swelling",
+      "Reduced mobility"
+    ],
+    "benefits": [
+      "Reduced knee pain",
+      "Improved joint mobility",
+      "Decreased inflammation",
+      "Strengthened knee joint",
+      "Enhanced lubrication"
+    ],
+    "lifestyleTips": [
+      "Maintain healthy weight",
+      "Practice gentle knee exercises",
+      "Avoid high-impact activities",
+      "Use proper footwear",
+      "Apply warm sesame oil daily"
+    ],
+    "image": "/images/treatments/janu-basti.jpg",
+    "categories": ["painManagement"]
+  },
+  {
+    "slug": "netra-tarpana",
+    "title": "Netra Tarpana",
+    "shortDescription": "Eye rejuvenation therapy where warm medicated ghee is retained around the eyes to improve vision and relieve eye strain.",
+    "longDescription": "Netra Tarpana is an Ayurvedic eye treatment where a dam is created around the eyes, and warm medicated ghee is poured within this dam. The eyes are bathed in this nourishing ghee for a specific duration, helping to relieve dryness, strain, and improve overall eye health.",
+    "symptoms": [
+      "Dry eyes",
+      "Eye strain",
+      "Computer vision syndrome",
+      "Blurred vision",
+      "Early cataract"
+    ],
+    "benefits": [
+      "Reduced eye dryness",
+      "Relief from eye strain",
+      "Improved vision",
+      "Nourishment of eye tissues",
+      "Prevention of age-related eye issues"
+    ],
+    "lifestyleTips": [
+      "Take regular breaks from screen time",
+      "Practice eye exercises",
+      "Use proper lighting when reading",
+      "Stay hydrated",
+      "Consume foods rich in vitamin A"
+    ],
+    "image": "/images/treatments/netra-tarpana.jpg",
+    "categories": ["rejuvenation"]
+  },
+  {
+    "slug": "pizhichil",
+    "title": "Pizhichil",
+    "shortDescription": "Luxurious treatment where warm herbal oil is continuously poured and massaged over the body to reduce Vata disorders and rejuvenate tissues.",
+    "longDescription": "Pizhichil, often called the 'royal treatment,' involves continuously pouring warm herbal oil over the body while simultaneously massaging it into the skin. This intensive therapy lasts 60-90 minutes and is excellent for nervous system disorders, arthritis, and deep tissue rejuvenation.",
+    "symptoms": [
+      "Arthritis",
+      "Nervous disorders",
+      "Muscle wasting",
+      "Paralysis",
+      "Chronic fatigue"
+    ],
+    "benefits": [
+      "Deep tissue rejuvenation",
+      "Strengthened nervous system",
+      "Reduced joint pain",
+      "Improved circulation",
+      "Enhanced vitality"
+    ],
+    "lifestyleTips": [
+      "Rest after treatment",
+      "Stay warm and avoid drafts",
+      "Drink warm water with ginger",
+      "Avoid strenuous activity",
+      "Follow Vata-pacifying diet"
+    ],
+    "image": "/images/treatments/pizhichil.jpg",
+    "categories": ["rejuvenation", "painManagement"]
+  },
+  {
+    "slug": "njavarakizhi",
+    "title": "Njavarakizhi",
+    "shortDescription": "Rejuvenating therapy where the body is massaged with boluses of cooked medicinal rice to strengthen muscles and reduce joint pain.",
+    "longDescription": "Njavarakizhi is a unique treatment where special medicinal rice (Njavara) is cooked in milk and herbal decoctions, then placed in boluses of cloth. These warm boluses are used to massage the entire body, providing nourishment to muscles and relieving joint pain.",
+    "symptoms": [
+      "Muscle weakness",
+      "Joint pain",
+      "Neurological disorders",
+      "Rheumatism",
+      "Sports injuries"
+    ],
+    "benefits": [
+      "Strengthened muscles",
+      "Improved joint mobility",
+      "Enhanced skin tone",
+      "Boosted circulation",
+      "Increased energy levels"
+    ],
+    "lifestyleTips": [
+      "Follow recommended dietary guidelines",
+      "Practice gentle stretching",
+      "Maintain adequate hydration",
+      "Rest sufficiently after treatment",
+      "Keep joints warm"
+    ],
+    "image": "/images/treatments/njavarakizhi.jpg",
+    "categories": ["rejuvenation", "painManagement"]
+  },
+  {
+    "slug": "swedana",
+    "title": "Swedana",
+    "shortDescription": "Therapeutic sweating therapy using herbal steam to open channels, release toxins, and prepare the body for deeper detoxification treatments.",
+    "longDescription": "Swedana is a therapeutic sweating procedure using herbal steam to induce sweating. Often performed after Abhyanga massage, it helps open channels in the body, dilate pores, and prepare the body for deeper Panchakarma treatments by loosening toxins and improving circulation.",
+    "symptoms": [
+      "Stiffness",
+      "Cold conditions",
+      "Toxin accumulation",
+      "Poor circulation",
+      "Respiratory congestion"
+    ],
+    "benefits": [
+      "Release of toxins through sweat",
+      "Improved circulation",
+      "Relief from stiffness",
+      "Cleared respiratory passages",
+      "Enhanced tissue permeability"
+    ],
+    "lifestyleTips": [
+      "Rest after treatment",
+      "Stay warm and covered",
+      "Drink warm water to rehydrate",
+      "Avoid cold exposure",
+      "Maintain a clean diet"
+    ],
+    "image": "/images/treatments/swedana.jpg",
+    "categories": ["detoxification", "panchakarma"]
+  },
+  {
+    "slug": "rasayana-therapy",
+    "title": "Rasayana Therapy",
+    "shortDescription": "Rejuvenation protocol using herbal formulations, diet, and lifestyle practices to enhance longevity, immunity, and overall vitality.",
+    "longDescription": "Rasayana Therapy is a comprehensive protocol focused on rejuvenation and longevity. It involves special herbal preparations, dietary protocols, and lifestyle practices designed to promote cellular regeneration, enhance immunity, and prevent aging-related degeneration.",
+    "symptoms": [
+      "Premature aging",
+      "Low immunity",
+      "Chronic fatigue",
+      "Degenerative conditions",
+      "Recovery from illness"
+    ],
+    "benefits": [
+      "Enhanced longevity",
+      "Improved immune function",
+      "Increased energy and vitality",
+      "Better memory and cognitive function",
+      "Optimal tissue health"
+    ],
+    "lifestyleTips": [
+      "Follow a sattvic diet",
+      "Practice regular meditation",
+      "Maintain healthy sleep patterns",
+      "Take prescribed herbs consistently",
+      "Practice positive thinking"
+    ],
+    "image": "/images/treatments/rasayana-therapy.jpg",
+    "categories": ["rejuvenation", "immunityBoost"]
+  },
+  {
+    "slug": "lepam",
+    "title": "Lepam",
+    "shortDescription": "Application of herbal pastes to the skin to treat various skin conditions, reduce inflammation, and enhance complexion and texture.",
+    "longDescription": "Lepam involves the application of herbal pastes or poultices to the skin. Different herbal combinations are used based on the skin condition being treated. The paste is applied for a specific time and then removed, taking impurities with it and leaving the skin nourished and rejuvenated.",
+    "symptoms": [
+      "Skin inflammation",
+      "Acne",
+      "Eczema",
+      "Pigmentation",
+      "Dull complexion"
+    ],
+    "benefits": [
+      "Reduced inflammation",
+      "Improved skin texture",
+      "Enhanced complexion",
+      "Detoxification of skin tissue",
+      "Treatment of specific skin conditions"
+    ],
+    "lifestyleTips": [
+      "Drink plenty of water",
+      "Follow a skin-friendly diet",
+      "Avoid harsh chemicals on skin",
+      "Use natural cleansers",
+      "Protect skin from sun exposure"
+    ],
+    "image": "/images/treatments/lepam.jpg",
+    "categories": ["skinCare"]
+  },
+  {
+    "slug": "herbal-steam",
+    "title": "Herbal Steam",
+    "shortDescription": "Localized or full-body steam treatment using medicinal herbs to improve circulation, clear respiratory passages, and relieve muscle tension.",
+    "longDescription": "Herbal Steam therapy involves exposing the body to steam infused with medicinal herbs. It can be applied to the whole body or specific areas. The warm, herb-infused steam opens pores, improves circulation, helps clear respiratory passages, and relieves muscle tension.",
+    "symptoms": [
+      "Respiratory congestion",
+      "Muscle tension",
+      "Skin impurities",
+      "Poor circulation",
+      "Joint stiffness"
+    ],
+    "benefits": [
+      "Cleared respiratory passages",
+      "Relaxed muscles",
+      "Improved circulation",
+      "Deep cleansing of skin",
+      "Enhanced joint mobility"
+    ],
+    "lifestyleTips": [
+      "Stay hydrated before and after",
+      "Rest after treatment",
+      "Avoid immediate cold exposure",
+      "Keep warm and covered",
+      "Practice deep breathing during treatment"
+    ],
+    "image": "/images/treatments/herbal-steam.jpg",
+    "categories": ["detoxification", "painManagement"]
+  },
+  {
+    "slug": "hair-scalp-therapy",
+    "title": "Hair & Scalp Therapy",
+    "shortDescription": "Specialized treatment using herbal oils and pastes to nourish the scalp, strengthen hair roots, prevent hair loss, and promote healthy growth.",
+    "longDescription": "Hair and Scalp Therapy in Ayurveda involves specialized treatments using herbal oils, pastes, and rinses to address various hair concerns. Techniques include massage, hot oil treatments, and herbal applications that nourish the scalp, strengthen hair roots, and promote healthy hair growth.",
+    "symptoms": [
+      "Hair loss",
+      "Premature graying",
+      "Dandruff",
+      "Dry or itchy scalp",
+      "Thin or brittle hair"
+    ],
+    "benefits": [
+      "Reduced hair fall",
+      "Strengthened hair roots",
+      "Improved hair texture",
+      "Healthy scalp condition",
+      "Promotion of new hair growth"
+    ],
+    "lifestyleTips": [
+      "Use natural hair care products",
+      "Follow a hair-nourishing diet",
+      "Practice regular scalp massage",
+      "Avoid harsh chemical treatments",
+      "Manage stress effectively"
+    ],
+    "image": "/images/treatments/hair-scalp-therapy.jpg",
+    "categories": ["rejuvenation"]
+  }
+] 

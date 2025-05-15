@@ -1,0 +1,451 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "treatments": "Treatments",
+    "gallery": "Gallery",
+    "videos": "Videos",
+    "contact": "Contact",
+    "book": "Book Appointment"
+  },
+  "footer": {
+    "rights": "© 2024 Nidan Ayurved. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "description": "Holistic healing through authentic Ayurvedic treatments, restoring balance between mind, body, and spirit.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "address": "F-5 Aakar Complex, Above Canara Bank, nr. Suresh Bhajiya, Samta Char Rasta, Subhanpura, Vadodara, Gujarat 390023"
+  },
+  "home": {
+    "hero": {
+      "title": "Holistic Healing with Ayurveda",
+      "subtitle": "Restoring balance between mind, body, and spirit",
+      "welcomeTitle": "Welcome to Nidan Ayurved – Your Sanctuary of Holistic Healing",
+      "welcomeSubtitle": "Authentic Ayurvedic treatments & Panchakarma therapies in Baroda. Restore balance and vitality—naturally."
+    },
+    "cta": {
+      "book": "Book Consultation",
+      "learn": "Learn More",
+      "call": "Call Now",
+      "whatsapp": "WhatsApp"
+    },
+    "whyAyurveda": {
+      "title": "Why Choose Ayurveda?",
+      "content": "Ayurveda is more than medicine—it's a science of balanced living. From personalized diet plans and positive lifestyle practices to effective treatments for chronic ailments, Ayurveda offers a holistic approach to well-being. Our therapies blend time-tested Vedic philosophy with proven healing techniques to rejuvenate the body, mind, and soul.",
+      "benefit1Title": "Ancient Wisdom",
+      "benefit1Text": "Time-tested practices developed over 5,000 years",
+      "benefit2Title": "Holistic Approach",
+      "benefit2Text": "Treats the whole person, not just symptoms",
+      "benefit3Title": "Natural Healing", 
+      "benefit3Text": "Uses herbs and therapies without harmful side effects"
+    },
+    "treatments": {
+      "title": "Our Panchakarma & Treatment Offerings",
+      "note": "Note: Treatments are tailored after consultation.",
+      "viewAll": "View All Treatments",
+      "snehana": "Snehana (Oleation Therapy)",
+      "swedana": "Swedana (Herbal Steam Therapy)",
+      "vamana": "Vamana (Therapeutic Emesis)",
+      "virechana": "Virechana (Purgation Therapy)",
+      "nasya": "Nasya (Nasal Cleansing)",
+      "raktamokshana": "Raktamokshana (Blood Detoxification)",
+      "basti": "Basti (Medicated Enema)",
+      "keraliya": "Keraliya Panchakarma (Specialized Kerala Therapies)"
+    },
+    "whyNidan": {
+      "title": "Natural Healing, Rooted in Tradition",
+      "subtitle": "Why Choose Nidan Ayurved",
+      "benefit1": "Experienced Ayurvedic Physicians",
+      "benefit1Description": "Our doctors have years of specialized training in authentic Ayurvedic practices.",
+      "benefit2": "Personalized, Side-Effect-Free Therapies",
+      "benefit2Description": "Each treatment plan is customized to your unique constitution and health needs.",
+      "benefit3": "Holistic Mind-Body Approach",
+      "benefit3Description": "We address the root causes of imbalance, not just the symptoms.",
+      "benefit4": "Focus on Long-Term Wellness",
+      "benefit4Description": "Our goal is to restore your body's natural ability to maintain health and prevent disease.",
+      "benefit5": "Authentic Panchakarma Practices",
+      "benefit5Description": "We preserve traditional techniques while implementing modern hygienic standards.",
+      "testimonialTitle": "Our Patient's Experience",
+      "testimonialText": "I came to Nidan Ayurved after trying various treatments for my chronic back pain. Their holistic approach not only relieved my pain but also improved my overall well-being. The personalized care and genuine concern for my health made all the difference.",
+      "patientName": "Sneha Patel",
+      "patientLocation": "Baroda, Gujarat",
+      "didYouKnowTitle": "Did You Know?",
+      "didYouKnowText": "Ayurveda is one of the world's oldest healing systems, originating in India over 5,000 years ago. It's recognized by the World Health Organization as a traditional medical system.",
+      "ayurvedaFact": "Ayurvedic Fact"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "items": [
+        {
+          "quote": "The Panchakarma treatment completely transformed my health. After years of digestive issues, I finally found relief. The staff is exceptionally knowledgeable and caring.",
+          "author": "Rajesh Shah",
+          "location": "Mumbai, India"
+        },
+        {
+          "quote": "I had chronic migraines for years. After just a month of Shirodhara treatments, the frequency and intensity have dramatically reduced. I'm incredibly grateful.",
+          "author": "Priya Patel",
+          "location": "Ahmedabad, India"
+        },
+        {
+          "quote": "The Abhyanga massage not only relieved my muscle tension but also improved my sleep quality. The warm oil techniques they use are truly rejuvenating.",
+          "author": "Amit Sharma",
+          "location": "Delhi, India"
+        }
+      ]
+    },
+    "stickyCta": {
+      "title": "Begin Your Healing Journey",
+      "call": "Call",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "metaTitle": "About Us - Nidan Ayurved",
+    "metaDescription": "Learn more about Nidan Ayurved and our commitment to holistic wellness through authentic Ayurvedic treatments.",
+    "subtitle": "Dedicated to authentic healing through ancient wisdom",
+    "description": "At Nidan Ayurved, we believe in the power of ancient Ayurvedic practices to address the root cause of health issues, not just the symptoms. Founded in 2010, our clinic combines traditional Ayurvedic principles with modern healthcare understanding.",
+    "mission": "Our mission is to provide authentic, personalized Ayurvedic treatments that restore balance to your body, mind, and spirit. We are committed to preserving the purity of Ayurvedic practices while making them accessible to everyone.",
+    "vision": "We envision a world where Ayurveda is recognized globally as a primary healthcare system that promotes not just the absence of disease, but true wellness and longevity.",
+    "imageAlt": "Nidan Ayurved Clinic Interior",
+    "teamTitle": "Meet Our Expert Team",
+    "teamSubtitle": "Our team of certified Ayurvedic practitioners brings decades of combined experience in traditional healing practices",
+    "specializationLabel": "Specialization",
+    "clinicHistory": "Our Journey Since 2015",
+    "missionTitle": "Our Healing Mission",
+    "locationTitle": "Our Home",
+    "location": "Based in Vadodara, Gujarat",
+    "trustedExperience": "Trusted and experienced since 2015",
+    "timelineTitle": "Our Healing Journey",
+    "timelineSubtitle": "Key milestones in our growth and commitment to authentic Ayurvedic care",
+    "milestones": [
+      {
+        "year": "2010",
+        "title": "Founding of Nidan Ayurved",
+        "description": "Dr. Pravir Gupta establishes Nidan Ayurved with a vision to provide authentic Panchakarma treatments",
+        "image": "/images/timeline/founding.jpg"
+      },
+      {
+        "year": "2015",
+        "title": "Clinic Expansion",
+        "description": "Our clinic expanded with additional treatment rooms and a dedicated herbal pharmacy",
+        "image": "/images/timeline/expansion.jpg"
+      },
+      {
+        "year": "2018",
+        "title": "5,000 Patient Milestone",
+        "description": "Celebrated successfully treating our 5,000th patient with traditional Ayurvedic therapies",
+        "image": "/images/timeline/patients.jpg"
+      },
+      {
+        "year": "2023",
+        "title": "Digital Transformation",
+        "description": "Launched our multilingual website to make Ayurvedic knowledge accessible to more people",
+        "image": "/images/timeline/digital.jpg"
+      }
+    ],
+    "team": [
+      {
+        "name": "Dr. Pravir Gupta",
+        "title": "Founder & Ayurvedic Surgeon",
+        "bio": "With over 20 years of experience, Dr. Pravir Gupta has dedicated his life to authentic Ayurvedic practices. He completed his BAMS from Gujarat Ayurved University and specializes in Ayurvedic surgery and Panchakarma treatments.",
+        "specialization": "Ayurvedic Surgery, Panchakarma, Digestive Disorders",
+        "image": "/images/team/dr-pravir.jpg"
+      },
+      {
+        "name": "Dr. Ritu Gupta",
+        "title": "Co-Founder & Ayurvedic Doctor",
+        "bio": "Dr. Ritu Gupta specializes in women's health and has been practicing Ayurveda for 15 years. She integrates modern medical knowledge with traditional Ayurvedic practices to provide comprehensive care.",
+        "specialization": "Women's Health, Fertility, Natural Skincare",
+        "image": "/images/team/dr-ritu.jpg"
+      }
+    ],
+    "clinicGallery": {
+      "title": "Our Healing Space",
+      "subtitle": "Take a visual tour of our tranquil clinic environment designed for holistic healing",
+      "videoTitle": "Virtual Tour of Our Clinic",
+      "videoDescription": "Experience the peaceful atmosphere of our Ayurvedic wellness center",
+      "videoUnsupported": "Your browser does not support video playback",
+      "treatmentRoom": "Ayurvedic Treatment Room",
+      "receptionArea": "Reception & Welcome Area",
+      "panchakarmaTherapy": "Panchakarma Therapy Space",
+      "consultationRoom": "Consultation Room",
+      "herbalPharmacy": "Herbal Pharmacy",
+      "waitingArea": "Patient Waiting Area",
+      "clinicExterior": "Clinic Exterior"
+    },
+    "trustSection": {
+      "title": "Why Trust Nidan Ayurved",
+      "subtitle": "Our commitment to authentic Ayurvedic care is reflected in our experience and results",
+      "stats": [
+        {
+          "value": "14+",
+          "label": "Years of Practice",
+          "description": "Over a decade of experience in authentic Ayurvedic treatments"
+        },
+        {
+          "value": "5000+",
+          "label": "Patients Treated",
+          "description": "Successfully helped thousands of patients on their healing journey"
+        },
+        {
+          "value": "92%",
+          "label": "Success Rate",
+          "description": "High success rate in treating chronic and complex conditions"
+        },
+        {
+          "value": "25+",
+          "label": "Authentic Therapies",
+          "description": "Wide range of traditional therapies tailored to individual needs"
+        }
+      ],
+      "valueProps": [
+        {
+          "title": "Personalized Care",
+          "description": "Treatments customized to your unique constitution and health needs"
+        },
+        {
+          "title": "Authentic Panchakarma",
+          "description": "Traditional detoxification therapies performed with authentic techniques"
+        },
+        {
+          "title": "Holistic Approach",
+          "description": "Addressing the root cause of health issues, not just symptoms"
+        },
+        {
+          "title": "Certified Practitioners",
+          "description": "Team of qualified Ayurvedic doctors with specialized training"
+        }
+      ]
+    },
+    "philosophySection": {
+      "quote": "Ayurveda is not merely treatment of symptoms, but a journey that brings harmony to mind, body, and soul. True healing emerges when we align ourselves with nature's wisdom and restore our innate balance.",
+      "founderName": "Dr. Pravir Gupta",
+      "founderTitle": "Founder, Nidan Ayurved",
+      "imageAlt": "Herbs and natural healing elements in Ayurveda"
+    },
+    "ourNameTitle": "Our Name",
+    "ourNameText": "The word 'Nidan' in Ayurveda refers to precise diagnosis — understanding the root cause of imbalance. This foundational principle guides our approach to holistic healing."
+  },
+  "ayurveda": {
+    "title": "What is Ayurveda?",
+    "metaTitle": "What is Ayurveda? - Nidan Ayurved",
+    "metaDescription": "Discover the principles and benefits of Ayurveda, the ancient holistic healing system from India that focuses on balancing mind, body, and spirit.",
+    "subtitle": "The ancient science of life and holistic healing that originated in India over 5,000 years ago",
+    "heroImageAlt": "Ayurvedic herbs and treatments",
+    "introTitle": "Understanding Ayurveda",
+    "introPara1": "Ayurveda, which translates to 'knowledge of life,' is one of the world's oldest holistic healing systems. Developed in India thousands of years ago, it's based on the belief that health and wellness depend on a delicate balance between the mind, body, and spirit.",
+    "introPara2": "Unlike modern medicine that often treats symptoms, Ayurveda focuses on promoting good health rather than fighting disease. It emphasizes prevention and addresses the root causes of imbalances through diet, lifestyle, herbal remedies, and therapeutic procedures.",
+    "introPara3": "The primary goal of Ayurveda is to help people live long, healthy, and balanced lives without the need for pills, complicated treatments, or surgery. It achieves this by harmonizing the body's constitution or 'dosha' and creating a lifestyle that's suitable for one's unique nature.",
+    "principlesImageAlt": "Ayurvedic principles illustration",
+    "doshasTitle": "The Three Doshas",
+    "doshasSubtitle": "According to Ayurvedic principles, we all have a unique combination of three energies or life forces called doshas",
+    "elementsLabel": "Elements",
+    "qualitiesLabel": "Qualities",
+    "doshas": [
+      {
+        "name": "Vata",
+        "symbol": "V",
+        "description": "Vata governs movement and is responsible for basic body processes such as breathing, cell division, and circulation. When in balance, Vata promotes creativity and flexibility.",
+        "elements": "Air and Space",
+        "qualities": "Dry, light, cold, rough, subtle, mobile"
+      },
+      {
+        "name": "Pitta",
+        "symbol": "P",
+        "description": "Pitta controls metabolism, digestion, and energy production. Balanced Pitta leads to contentment and intelligence while promoting understanding and a sharp mind.",
+        "elements": "Fire and Water",
+        "qualities": "Hot, sharp, light, oily, liquid, mobile"
+      },
+      {
+        "name": "Kapha",
+        "symbol": "K",
+        "description": "Kapha is responsible for growth, structure, and lubrication in the body. When in balance, Kapha expresses love, calmness, and forgiveness.",
+        "elements": "Earth and Water",
+        "qualities": "Heavy, slow, cool, oily, smooth, dense, soft, stable"
+      }
+    ],
+    "benefitsTitle": "Benefits of Ayurvedic Treatments",
+    "benefitsSubtitle": "Discover how Ayurveda can improve your overall well-being",
+    "benefits": [
+      {
+        "title": "Stress Reduction",
+        "description": "Ayurvedic practices like meditation, yoga, and specific breathing exercises help reduce stress and promote mental clarity and relaxation."
+      },
+      {
+        "title": "Detoxification",
+        "description": "Panchakarma and other Ayurvedic detox therapies help remove toxins from the body, improving overall health and immunity."
+      },
+      {
+        "title": "Improved Digestion",
+        "description": "Many Ayurvedic treatments focus on enhancing digestive fire (Agni), which helps improve nutrient absorption and prevent digestive disorders."
+      },
+      {
+        "title": "Weight Management",
+        "description": "By balancing doshas and improving metabolism, Ayurveda offers natural approaches to maintaining a healthy weight."
+      },
+      {
+        "title": "Better Sleep",
+        "description": "Ayurvedic routines and herbal remedies can help regulate sleep cycles and address issues like insomnia for deeper, more restful sleep."
+      },
+      {
+        "title": "Enhanced Immunity",
+        "description": "Ayurvedic herbs and lifestyle practices strengthen the immune system, helping the body prevent and fight off illness naturally."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "metaTitle": "Contact Us - Nidan Ayurved",
+    "metaDescription": "Get in touch with our Ayurvedic experts for consultations, appointments, or any inquiries about our treatments and services.",
+    "subtitle": "We'd love to hear from you. Feel free to reach out with any questions about our Ayurvedic treatments or to schedule a consultation.",
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "subject": "Subject",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "nameRequired": "Please enter your name",
+    "nameMinLength": "Name must be at least 2 characters",
+    "emailRequired": "Please enter your email",
+    "emailInvalid": "Please enter a valid email address",
+    "phoneInvalid": "Please enter a valid phone number",
+    "subjectRequired": "Please enter a subject",
+    "messageRequired": "Please enter your message",
+    "messageMinLength": "Message must be at least 10 characters",
+    "errorMessage": "Something went wrong. Please try again later.",
+    "thankYou": "Thank You!",
+    "successMessage": "Your message has been sent successfully. We'll get back to you as soon as possible.",
+    "treatmentQuery": "Query Regarding Treatments?",
+    "treatmentInterest": "Which treatment are you interested in?",
+    "treatmentRequired": "Please select a treatment",
+    "selectTreatment": "Select a treatment",
+    "noTreatmentsFound": "No treatments found matching your search"
+  },
+  "treatments": {
+    "title": "Our Treatments",
+    "metaTitle": "Ayurvedic Treatments - Nidan Ayurved",
+    "metaDescription": "Explore our authentic Ayurvedic treatments for holistic healing and wellness.",
+    "description": "Discover our range of authentic Ayurvedic treatments that address the root cause of health issues and restore your natural balance",
+    "categories": ["Panchakarma", "Detoxification", "Skin Health", "Digestive Health", "Pain Management", "Stress Relief"],
+    "viewTreatment": "View Treatment",
+    "symptomsTitle": "Common Symptoms",
+    "benefitsTitle": "Benefits",
+    "lifestyleTitle": "Lifestyle Tips",
+    "relatedTreatments": "Related Treatments",
+    "bookTreatment": "Book This Treatment",
+    "consultationNeeded": "Ready to Experience This Treatment?",
+    "searchPlaceholder": "Search treatments...",
+    "filterByCategory": "Filter by Category:",
+    "clearFilters": "Clear",
+    "activeFilters": "Active filters:",
+    "search": "Search",
+    "category": "Category",
+    "clearAllFilters": "Clear all",
+    "noResults": "No treatments found matching your search.",
+    "tryAdjusting": "Try adjusting your search or filter to find what you're looking for.",
+    "keyBenefits": "Key Benefits",
+    "benefitsSubheading": "Experience these transformative health benefits with this authentic Ayurvedic treatment.",
+    "recommendedFor": "Recommended For",
+    "recommendedForSubheading": "This treatment is particularly beneficial for the following conditions or symptoms.",
+    "procedureOverview": "Procedure Overview",
+    "procedureSubheading": "Understand the careful and expert process followed during this Ayurvedic treatment.",
+    "lifestyleTipsHeading": "Lifestyle Tips During Treatment",
+    "lifestyleTipsSubheading": "Follow these Ayurvedic recommendations to enhance the effectiveness of your treatment.",
+    "faqHeading": "Frequently Asked Questions",
+    "faqSubheading": "Get answers to common questions about this treatment."
+  },
+  "appointment": {
+    "title": "Book an Appointment",
+    "metaTitle": "Book an Appointment - Nidan Ayurved",
+    "metaDescription": "Schedule an appointment with our Ayurvedic experts for a consultation or treatment at Nidan Ayurved.",
+    "subtitle": "Fill out the form below to book an appointment with our Ayurvedic experts. We'll confirm your appointment via email or phone.",
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "date": "Preferred Date",
+    "time": "Preferred Time",
+    "treatment": "Treatment",
+    "selectTreatment": "Select a treatment",
+    "initialConsultation": "Initial Consultation",
+    "message": "Additional Notes",
+    "messagePlaceholder": "Please include any specific concerns or questions you have about the treatment...",
+    "submit": "Book Appointment",
+    "submitting": "Booking...",
+    "nameRequired": "Please enter your name",
+    "emailRequired": "Please enter your email",
+    "emailInvalid": "Please enter a valid email address",
+    "phoneRequired": "Please enter your phone number",
+    "dateRequired": "Please select a date",
+    "timeRequired": "Please select a time",
+    "treatmentRequired": "Please select a treatment",
+    "selectTime": "Select a time",
+    "errorMessage": "Something went wrong. Please try again later.",
+    "thankYou": "Thank You!",
+    "successMessage": "Your appointment has been booked successfully. We'll confirm your appointment shortly."
+  },
+  "common": {
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "learnMore": "Learn More",
+    "about": "About"
+  },
+  "ctaStrip": {
+    "title": "Ready to begin your healing journey?",
+    "subtitle": "Schedule your consultation today and take the first step towards holistic wellness.",
+    "button": "Book Your Consultation"
+  },
+  "site": {
+    "name": "Nidan Ayurved",
+    "tagline": "Ancient Wisdom for Modern Wellness"
+  },
+  "meta": {
+    "title": "Nidan Ayurved - Authentic Ayurvedic Treatments in Vadodara",
+    "description": "Experience authentic Ayurvedic treatments and Panchakarma therapy in Vadodara. Naturally restore balance and wellness.",
+    "keywords": "Ayurveda, Panchakarma, Vadodara, Gujarat, Wellness, Holistic Health, Natural Healing"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "metaTitle": "Gallery - Nidan Ayurved",
+    "metaDescription": "Explore the Nidan Ayurved gallery featuring images of our therapies, facilities, and healing events.",
+    "subtitle": "Explore our therapies, facilities, and moments of healing",
+    "filterTitle": "Browse by Category",
+    "filterAll": "All",
+    "filterTherapies": "Therapies",
+    "filterCenter": "Center",
+    "filterEvents": "Events",
+    "lightboxTitle": "Image Gallery",
+    "lightboxClose": "Close",
+    "lightboxPrev": "Previous",
+    "lightboxNext": "Next",
+    "noImagesFound": "No images found in this category",
+    "expandImage": "Click to expand",
+    "swipeToNavigate": "Swipe to navigate",
+    "featuredMomentsTitle": "Healing Moments",
+    "searchPlaceholder": "Search images...",
+    "clearSearch": "Clear search",
+    "activeFilter": "Active filter:",
+    "clearFilter": "Clear filter",
+    "categories": {
+      "therapies": "Therapies",
+      "center": "Our Center",
+      "events": "Events"
+    },
+    "imageAlt": {
+      "panchakarma": "Panchakarma Therapy",
+      "abhyanga": "Abhyanga Massage Therapy",
+      "shirodhara": "Shirodhara Therapy",
+      "reception": "Reception Area",
+      "consultationRoom": "Consultation Room",
+      "herbalPharmacy": "Herbal Pharmacy",
+      "workshop": "Ayurvedic Workshop",
+      "ayurvedaAwareness": "Ayurveda Awareness Program",
+      "communityProgram": "Community Health Program"
+    }
+  }
+} 

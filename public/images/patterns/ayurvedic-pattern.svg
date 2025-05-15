@@ -1,0 +1,47 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Leaf Pattern -->
+    <symbol id="leaf" viewBox="0 0 24 24">
+      <path d="M21.71,3.29a1,1,0,0,0-1.42,0l-3.29,3.3V2a1,1,0,0,0-2,0V8.59L12.71,6.29a1,1,0,0,0-1.42,1.42L15.59,12H9a1,1,0,0,0,0,2h6.59l-4.3,4.29a1,1,0,1,0,1.42,1.42L15,17.41V22a1,1,0,0,0,2,0V15.41l3.29,3.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L18.41,14H23a1,1,0,0,0,0-2H18.41l3.3-3.29A1,1,0,0,0,21.71,3.29Z"/>
+    </symbol>
+    
+    <!-- Flower Pattern -->
+    <symbol id="flower" viewBox="0 0 24 24">
+      <path d="M12,11A3,3,0,1,0,9,8,3,3,0,0,0,12,11Zm0-4a1,1,0,1,1-1,1A1,1,0,0,1,12,7ZM13,12H11a5,5,0,0,0-5,5v5a1,1,0,0,0,1,1h10a1,1,0,0,0,1-1V17A5,5,0,0,0,13,12Zm3,9H8V17a3,3,0,0,1,3-3h2a3,3,0,0,1,3,3Zm5-13a3,3,0,0,0-4,1.36,3,3,0,0,0-4-4,3,3,0,0,0-4,4A3,3,0,1,0,7,9.36,3,3,0,0,0,12,8a3,3,0,0,0,5,1.36A3,3,0,1,0,21,8Z"/>
+    </symbol>
+    
+    <!-- Om Symbol -->
+    <symbol id="om" viewBox="0 0 24 24">
+      <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20ZM15,9a2,2,0,0,0-2-2H9v9a1,1,0,0,0,2,0V14h2a2,2,0,0,0,2-2V10A1,1,0,0,0,15,9Zm-4,3V9h2v3Z"/>
+    </symbol>
+    
+    <!-- Chakra Pattern -->
+    <symbol id="chakra" viewBox="0 0 24 24">
+      <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20ZM12,6a1,1,0,0,0-1,1v4a1,1,0,0,0,.45.9l4,2A1,1,0,0,0,16,14.5a1,1,0,0,0-.45-.9L12,12.12V7A1,1,0,0,0,12,6Z"/>
+    </symbol>
+  </defs>
+  
+  <!-- Background Grid -->
+  <rect width="100" height="100" fill="none"/>
+  
+  <!-- Pattern Layout -->
+  <use href="#leaf" x="0" y="0" width="24" height="24" fill="#025645"/>
+  <use href="#flower" x="25" y="0" width="24" height="24" fill="#025645"/>
+  <use href="#chakra" x="50" y="0" width="24" height="24" fill="#025645"/>
+  <use href="#om" x="75" y="0" width="24" height="24" fill="#025645"/>
+  
+  <use href="#om" x="0" y="25" width="24" height="24" fill="#025645"/>
+  <use href="#leaf" x="25" y="25" width="24" height="24" fill="#025645" transform="rotate(45, 37, 37)"/>
+  <use href="#flower" x="50" y="25" width="24" height="24" fill="#025645"/>
+  <use href="#chakra" x="75" y="25" width="24" height="24" fill="#025645"/>
+  
+  <use href="#chakra" x="0" y="50" width="24" height="24" fill="#025645"/>
+  <use href="#om" x="25" y="50" width="24" height="24" fill="#025645"/>
+  <use href="#leaf" x="50" y="50" width="24" height="24" fill="#025645" transform="rotate(90, 62, 62)"/>
+  <use href="#flower" x="75" y="50" width="24" height="24" fill="#025645"/>
+  
+  <use href="#flower" x="0" y="75" width="24" height="24" fill="#025645"/>
+  <use href="#chakra" x="25" y="75" width="24" height="24" fill="#025645"/>
+  <use href="#om" x="50" y="75" width="24" height="24" fill="#025645"/>
+  <use href="#leaf" x="75" y="75" width="24" height="24" fill="#025645" transform="rotate(135, 87, 87)"/>
+</svg> 
