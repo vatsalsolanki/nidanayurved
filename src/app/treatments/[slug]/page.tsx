@@ -8,15 +8,20 @@ import TreatmentCta from "./TreatmentCta";
 import TreatmentPage from '../treatmentdetails/TreatmentPage';
 import Script from "next/script";
 
-// Define props type with proper Promise typing for Next.js 15
+// Define params type with proper Promise typing for Next.js 15
+type ParamsType = Promise<{ slug: string; locale?: string }>;
+type SearchParams = Promise<Record<string, string | string[] | undefined>>;
+
 type Props = {
-  params: { slug: string; locale?: string }
+  params: ParamsType;
+  searchParams: SearchParams;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: ParamsType }): Promise<Metadata> {
   // Use default locale if not specified
-  const locale = (params?.locale || 'en') as Locale;
-  const slug = params?.slug || '';
+  const resolvedParams = await params;
+  const locale = (resolvedParams?.locale || 'en') as Locale;
+  const slug = resolvedParams?.slug || '';
   
   if (!slug) {
     return {
@@ -124,8 +129,9 @@ export async function generateStaticParams() {
 
 export default async function TreatmentDetailPage({ params }: Props) {
   // Get locale and slug from params
-  const locale = (params?.locale || 'en') as Locale;
-  const slug = params?.slug || '';
+  const resolvedParams = await params;
+  const locale = (resolvedParams?.locale || 'en') as Locale;
+  const slug = resolvedParams?.slug || '';
   
   // Early return if no slug is provided
   if (!slug) {

@@ -62,25 +62,49 @@ export function WhyAyurvedaSection({ dictionary, locale }: WhyAyurvedaSectionPro
       </div>
       
       <motion.div
-        className="container mx-auto px-4 md:px-6 relative z-10"
+        style={{
+          maxWidth: '1280px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: '1rem',
+          paddingRight: '1rem',
+          position: 'relative',
+          zIndex: 10
+        }}
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        <motion.div className="text-center mb-16" variants={itemVariants}>
+        <motion.div style={{ textAlign: 'center', marginBottom: '4rem' }} variants={itemVariants}>
           <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 font-${locale}`}>
             {dictionary.home.whyAyurveda?.title || "Why Choose Ayurveda?"}
           </h2>
           <motion.div
-            className="w-24 h-1 bg-accent mx-auto mb-8 rounded-full"
+            style={{
+              width: '6rem',
+              height: '0.25rem',
+              backgroundColor: 'var(--color-accent)',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              marginBottom: '2rem',
+              borderRadius: '9999px'
+            }}
             initial={{ width: 0 }}
             whileInView={{ width: 96 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           ></motion.div>
           <motion.p
-            className={`text-neutral-700 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-${locale}`}
+            style={{
+              color: '#374151',
+              fontSize: 'clamp(1.125rem, 2vw, 1.25rem)',
+              maxWidth: '48rem',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              lineHeight: '1.7',
+              fontFamily: `var(--font-${locale})`
+            }}
             variants={itemVariants}
           >
             {dictionary.home.whyAyurveda?.content || 
@@ -91,7 +115,16 @@ export function WhyAyurvedaSection({ dictionary, locale }: WhyAyurvedaSectionPro
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Ancient Wisdom */}
           <motion.div 
-            className="relative bg-white p-8 rounded-2xl shadow-md border border-neutral-100 overflow-hidden hover:shadow-xl transition-shadow duration-500"
+            style={{
+              position: 'relative',
+              backgroundColor: 'white',
+              padding: '2rem',
+              borderRadius: '1rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+              border: '1px solid #f1f1f1',
+              overflow: 'hidden',
+              transition: 'box-shadow 0.5s'
+            }}
             variants={itemVariants}
             whileHover={{ y: -8, transition: { duration: 0.3 } }}
           >
@@ -149,7 +182,16 @@ export function WhyAyurvedaSection({ dictionary, locale }: WhyAyurvedaSectionPro
           
           {/* Holistic Approach */}
           <motion.div 
-            className="relative bg-white p-8 rounded-2xl shadow-md border border-neutral-100 overflow-hidden hover:shadow-xl transition-shadow duration-500"
+            style={{
+              position: 'relative',
+              backgroundColor: 'white',
+              padding: '2rem',
+              borderRadius: '1rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+              border: '1px solid #f1f1f1',
+              overflow: 'hidden',
+              transition: 'box-shadow 0.5s'
+            }}
             variants={itemVariants}
             whileHover={{ y: -8, transition: { duration: 0.3 } }}
           >
@@ -208,7 +250,16 @@ export function WhyAyurvedaSection({ dictionary, locale }: WhyAyurvedaSectionPro
           
           {/* Natural Healing */}
           <motion.div 
-            className="relative bg-white p-8 rounded-2xl shadow-md border border-neutral-100 overflow-hidden hover:shadow-xl transition-shadow duration-500"
+            style={{
+              position: 'relative',
+              backgroundColor: 'white',
+              padding: '2rem',
+              borderRadius: '1rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+              border: '1px solid #f1f1f1',
+              overflow: 'hidden',
+              transition: 'box-shadow 0.5s'
+            }}
             variants={itemVariants}
             whileHover={{ y: -8, transition: { duration: 0.3 } }}
           >
@@ -258,7 +309,10 @@ export function WhyAyurvedaSection({ dictionary, locale }: WhyAyurvedaSectionPro
         
         {/* Additional call to action or link */}
         <motion.div 
-          className="mt-16 text-center"
+          style={{
+            marginTop: '4rem',
+            textAlign: 'center'
+          }}
           variants={itemVariants}
         >
           <Link 

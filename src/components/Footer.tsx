@@ -44,18 +44,22 @@ export default function Footer({ dictionary, locale }: FooterProps) {
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white hover:bg-primary/90"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <social.icon className="w-4 h-4" />
-                </motion.a>
+                <div key={social.label}>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      className="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white hover:bg-primary/90"
+                    >
+                      <social.icon className="w-4 h-4" />
+                    </a>
+                  </motion.div>
+                </div>
               ))}
             </div>
           </div>

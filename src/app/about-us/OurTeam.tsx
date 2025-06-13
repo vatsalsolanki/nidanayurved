@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Locale } from '@/lib/i18n';
-import MotionWrapper from '@/components/ui/MotionWrapper';
+import { MotionWrapper } from '@/components/ui/MotionWrapper';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -115,79 +115,78 @@ export default function OurTeam({ dictionary, locale }: OurTeamProps) {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-background to-accent/10">
       <div className="container mx-auto px-4">
-        <MotionWrapper
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className={cn("text-3xl md:text-4xl font-bold text-primary mb-4", fontClass)}>
-            {dictionary.about.teamTitle}
-          </h2>
-          <p className={cn("text-lg max-w-3xl mx-auto text-text/80", fontClass)}>
-            {dictionary.about.teamSubtitle}
-          </p>
-        </MotionWrapper>
+        <div className="text-center mb-16">
+          <MotionWrapper
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className={cn("text-3xl md:text-4xl font-bold text-primary mb-4", fontClass)}>
+              {dictionary.about.teamTitle}
+            </h2>
+            <p className={cn("text-lg max-w-3xl mx-auto text-text/80", fontClass)}>
+              {dictionary.about.teamSubtitle}
+            </p>
+          </MotionWrapper>
+        </div>
 
-        <MotionWrapper 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {teamMembers.map((member: any, index: number) => (
             <MotionWrapper 
               key={index}
               variants={itemVariants}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
             >
-              {/* Image Section */}
-              <div className="relative h-64 md:w-2/5 md:h-auto bg-primary/10">
-                {!imageError[index] ? (
-                  <Image
-                    src={member.image || "/images/team/placeholder.jpg"}
-                    alt={member.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
-                    onError={() => handleImageError(index)}
-                  />
-                ) : renderImageFallback(member.name)}
-              </div>
-              
-              {/* Content Section */}
-              <div className="p-6 md:w-3/5 flex flex-col">
-                <h3 className={cn("text-xl font-bold text-primary mb-1", fontClass)}>
-                  {member.name}
-                </h3>
-                <p className={cn("text-secondary/80 mb-3", fontClass)}>
-                  {member.title}
-                </p>
-                <p className={cn("text-text/70 mb-auto", fontClass)}>
-                  {member.bio}
-                </p>
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row h-full">
+                {/* Image Section */}
+                <div className="relative h-64 md:w-2/5 md:h-auto bg-primary/10">
+                  {!imageError[index] ? (
+                    <Image
+                      src={member.image || "/images/team/placeholder.jpg"}
+                      alt={member.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
+                      onError={() => handleImageError(index)}
+                    />
+                  ) : renderImageFallback(member.name)}
+                </div>
+                
+                {/* Content Section */}
+                <div className="p-6 md:w-3/5 flex flex-col">
+                  <h3 className={cn("text-xl font-bold text-primary mb-1", fontClass)}>
+                    {member.name}
+                  </h3>
+                  <p className={cn("text-secondary/80 mb-3", fontClass)}>
+                    {member.title}
+                  </p>
+                  <p className={cn("text-text/70 mb-auto", fontClass)}>
+                    {member.bio}
+                  </p>
 
-                {member.specialization && (
-                  <div className="mt-4 flex items-center">
-                    <span className="text-primary mr-2">
-                      {getExpertiseIcon(member.specialization)}
-                    </span>
-                    <div>
-                      <h4 className={cn("text-sm font-semibold text-primary mb-1", fontClass)}>
-                        {dictionary.about.specializationLabel}:
-                      </h4>
-                      <p className={cn("text-sm text-text/70", fontClass)}>
-                        {member.specialization}
-                      </p>
+                  {member.specialization && (
+                    <div className="mt-4 flex items-center">
+                      <span className="text-primary mr-2">
+                        {getExpertiseIcon(member.specialization)}
+                      </span>
+                      <div>
+                        <h4 className={cn("text-sm font-semibold text-primary mb-1", fontClass)}>
+                          {dictionary.about.specializationLabel}:
+                        </h4>
+                        <p className={cn("text-sm text-text/70", fontClass)}>
+                          {member.specialization}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </MotionWrapper>
           ))}
-        </MotionWrapper>
+        </div>
       </div>
     </section>
   );

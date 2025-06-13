@@ -16,19 +16,22 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale?: string };
+  params: Promise<{ locale?: string }>;
 }) {
   // Get the headers - correctly await the headers object
   const headersList = await headers();
   const pathname = headersList.get("x-pathname") || "";
   const headerLocale = headersList.get("x-locale");
   
+  // Resolve the params promise
+  const resolvedParams = await params;
+  
   // Determine locale from headers, params, or default to English
   let locale: Locale = "en"; // Default is English
   
-  if (params.locale && isValidLocale(params.locale)) {
+  if (resolvedParams.locale && isValidLocale(resolvedParams.locale)) {
     // Locale from route params (for /hi/... or /gu/... routes)
-    locale = params.locale;
+    locale = resolvedParams.locale;
   } else if (headerLocale && isValidLocale(headerLocale)) {
     // Locale from headers (set by middleware)
     locale = headerLocale as Locale;

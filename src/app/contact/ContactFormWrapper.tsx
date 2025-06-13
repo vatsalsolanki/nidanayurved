@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
+import { ErrorBoundary } from 'react-error-boundary';
 import ContactForm from './ContactForm';
 import SimpleContactForm from './SimpleContactForm';
 import { Locale } from '@/lib/i18n';
@@ -9,6 +9,11 @@ import { Locale } from '@/lib/i18n';
 interface ContactFormWrapperProps {
   dictionaryData: string;
   locale: Locale;
+}
+
+// Define our own fallback props type for compatibility with React 19
+interface CustomFallbackProps {
+  error: Error;
 }
 
 export default function ContactFormWrapper({ dictionaryData, locale }: ContactFormWrapperProps) {
@@ -26,7 +31,7 @@ export default function ContactFormWrapper({ dictionaryData, locale }: ContactFo
   }, [dictionaryData]);
 
   // Fallback component for when the main form fails
-  const FallbackComponent = ({ error }: FallbackProps) => {
+  const FallbackComponent = ({ error }: CustomFallbackProps) => {
     console.error('Error in ContactForm component:', error);
     return dictionary ? (
       <SimpleContactForm dictionary={dictionary} locale={locale} />

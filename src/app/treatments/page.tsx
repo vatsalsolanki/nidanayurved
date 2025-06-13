@@ -5,14 +5,24 @@ import TreatmentsHero from './TreatmentsHero';
 import TreatmentsList from './TreatmentsList';
 import TreatmentsCta from './TreatmentsCta';
 
+// Define params type with proper Promise typing for Next.js 15
+type Params = Promise<{ locale?: string }>;
+type SearchParams = Promise<Record<string, string | string[] | undefined>>;
+
+type Props = {
+  params: Params;
+  searchParams: SearchParams;
+}
+
 // Generate metadata for SEO
 export async function generateMetadata({
   params
 }: {
-  params: { locale?: string }
+  params: Params
 }): Promise<Metadata> {
   // Use default locale if not specified
-  const locale = (params.locale || 'en') as Locale;
+  const resolvedParams = await params;
+  const locale = (resolvedParams.locale || 'en') as Locale;
   
   try {
     const dictionary = await getDictionary(locale);
@@ -58,12 +68,12 @@ export async function generateMetadata({
 }
 
 export default async function TreatmentsPage({
-  params
-}: {
-  params: { locale?: string }
-}) {
+  params,
+  searchParams
+}: Props) {
   // Use default locale if not specified
-  const locale = (params.locale || 'en') as Locale;
+  const resolvedParams = await params;
+  const locale = (resolvedParams.locale || 'en') as Locale;
   
   try {
     const dictionary = await getDictionary(locale);

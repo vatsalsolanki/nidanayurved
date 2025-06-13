@@ -4,14 +4,20 @@ import { notFound } from 'next/navigation';
 import TreatmentPage from '@/app/treatments/treatmentdetails/TreatmentPage';
 import Script from 'next/script';
 
+// Define params type with proper Promise typing for Next.js 15
+type ParamsType = Promise<{ slug: string }>;
+type SearchParams = Promise<Record<string, string | string[] | undefined>>;
+
 // Define props type with proper Promise awaiting
 type Props = {
-  params: { slug: string }
+  params: ParamsType;
+  searchParams: SearchParams;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: ParamsType }): Promise<Metadata> {
   const locale: Locale = 'hi';
-  const slug = params.slug;
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
   
   // Strip .jpg extension if present in the slug
   const cleanSlug = slug?.replace(/\.jpg$/, '') || '';
@@ -104,13 +110,15 @@ export async function generateStaticParams() {
 export default async function HindiTreatmentPage({ params }: Props) {
   const locale: Locale = 'hi';
   
-  if (!params || !params.slug) {
+  const resolvedParams = await params;
+  
+  if (!resolvedParams || !resolvedParams.slug) {
     console.error('Missing slug parameter');
     return notFound();
   }
   
   // Safely handle the slug parameter
-  const slug = params.slug;
+  const slug = resolvedParams.slug;
   
   // Strip .jpg extension if present in the slug
   const cleanSlug = slug.replace(/\.jpg$/, '');

@@ -404,18 +404,34 @@ export function PanchakarmaSection({ dictionary, locale }: PanchakarmaSectionPro
       </div>
       
       <motion.div
-        className="container mx-auto px-4 md:px-6 relative z-10"
+        style={{
+          maxWidth: '1280px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: '1rem',
+          paddingRight: '1rem',
+          position: 'relative',
+          zIndex: 10
+        }}
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        <motion.div className="text-center mb-16" variants={itemVariants}>
+        <motion.div style={{ textAlign: 'center', marginBottom: '4rem' }} variants={itemVariants}>
           <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 font-${locale}`}>
             {dictionary.home.treatments?.title || "Our Panchakarma & Treatment Offerings"}
           </h2>
           <motion.div
-            className="w-24 h-1 bg-accent mx-auto mb-8 rounded-full"
+            style={{
+              width: '6rem',
+              height: '0.25rem',
+              backgroundColor: 'var(--color-accent)',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              marginBottom: '2rem',
+              borderRadius: '9999px'
+            }}
             initial={{ width: 0 }}
             whileInView={{ width: 96 }}
             viewport={{ once: true }}
@@ -427,7 +443,14 @@ export function PanchakarmaSection({ dictionary, locale }: PanchakarmaSectionPro
           {treatments.map((treatment) => (
             <motion.div
               key={treatment.id}
-              className="relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
+              style={{
+                position: 'relative',
+                backgroundColor: 'white',
+                borderRadius: '0.75rem',
+                overflow: 'hidden',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                transition: 'all 0.3s'
+              }}
               variants={itemVariants}
               onHoverStart={() => setActiveCard(treatment.id)}
               onHoverEnd={() => setActiveCard(null)}
@@ -474,7 +497,7 @@ export function PanchakarmaSection({ dictionary, locale }: PanchakarmaSectionPro
         </div>
         
         <motion.div 
-          className="text-center mt-16"
+          style={{ textAlign: 'center', marginTop: '4rem' }}
           variants={itemVariants}
         >
           <p className={`text-neutral-600 italic mb-8 font-${locale}`}>

@@ -114,7 +114,14 @@ export default function AppointmentForm({ dictionary, locale }: AppointmentFormP
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-primary/10 text-primary text-center p-8 rounded-lg shadow-md"
+        style={{ 
+          backgroundColor: 'rgba(var(--color-primary), 0.1)',
+          color: 'var(--color-primary)',
+          textAlign: 'center',
+          padding: '2rem',
+          borderRadius: '0.5rem',
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+        }}
       >
         <div className="w-16 h-16 bg-primary/20 mx-auto rounded-full flex items-center justify-center mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -132,7 +139,12 @@ export default function AppointmentForm({ dictionary, locale }: AppointmentFormP
       variants={formVariants}
       initial="hidden"
       animate="visible"
-      className="bg-white p-6 md:p-8 rounded-lg shadow-lg"
+      style={{
+        backgroundColor: 'white',
+        padding: '1.5rem 2rem',
+        borderRadius: '0.5rem',
+        boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+      }}
     >
       {submitError && (
         <div className="bg-red-50 text-red-500 p-4 rounded-md mb-6">
@@ -253,7 +265,7 @@ export default function AppointmentForm({ dictionary, locale }: AppointmentFormP
           </motion.div>
         </div>
         
-        <motion.div variants={itemVariants} className="mt-6">
+        <motion.div variants={itemVariants} style={{ marginTop: '1.5rem' }}>
           <label htmlFor="message" className="block text-sm font-medium text-text mb-1">
             {dictionary.appointment.message}
           </label>
@@ -266,7 +278,7 @@ export default function AppointmentForm({ dictionary, locale }: AppointmentFormP
           ></textarea>
         </motion.div>
         
-        <motion.div variants={itemVariants} className="mt-8">
+        <motion.div variants={itemVariants} style={{ marginTop: '2rem' }}>
           <button
             type="submit"
             disabled={isSubmitting}

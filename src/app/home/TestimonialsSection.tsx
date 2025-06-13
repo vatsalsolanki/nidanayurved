@@ -86,7 +86,10 @@ export function TestimonialsSection({ dictionary, locale }: TestimonialsSectionP
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div 
-          className="text-center mb-12"
+          style={{
+            textAlign: 'center',
+            marginBottom: '3rem'
+          }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -96,7 +99,15 @@ export function TestimonialsSection({ dictionary, locale }: TestimonialsSectionP
             {dictionary.home.testimonials?.title || "What Our Clients Say"}
           </h2>
           <motion.div
-            className="w-24 h-1 bg-accent mx-auto mb-8 rounded-full"
+            style={{
+              width: '6rem',
+              height: '0.25rem',
+              backgroundColor: 'var(--color-accent)',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              marginBottom: '2rem',
+              borderRadius: '9999px'
+            }}
             initial={{ width: 0 }}
             whileInView={{ width: 96 }}
             viewport={{ once: true }}
@@ -136,14 +147,19 @@ export function TestimonialsSection({ dictionary, locale }: TestimonialsSectionP
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="text-center max-w-3xl mx-auto"
+                    style={{
+                      textAlign: 'center',
+                      maxWidth: '48rem',
+                      marginLeft: 'auto',
+                      marginRight: 'auto'
+                    }}
                   >
                     <blockquote className={`text-lg md:text-xl text-neutral-700 italic mb-8 relative font-${locale}`}>
                       &ldquo;{testimonials[currentIndex]?.quote || defaultTestimonials[0].quote}&rdquo;
                     </blockquote>
                     
                     <motion.div 
-                      className="inline-block"
+                      style={{ display: 'inline-block' }}
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.3, duration: 0.4 }}

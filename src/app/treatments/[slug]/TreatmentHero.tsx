@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
+import { MotionWrapper } from '@/components/ui/MotionWrapper';
 
 interface TreatmentHeroProps {
   treatment: any;
@@ -50,14 +51,15 @@ export default function TreatmentHero({ treatment, dictionary, locale }: Treatme
       </div>
 
       <div className="container mx-auto px-4">
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <MotionWrapper
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {/* Left column - Text content */}
-          <motion.div variants={itemVariants}>
+            <div>
+              <MotionWrapper variants={itemVariants}>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary">
               {treatment.title}
             </h1>
@@ -72,10 +74,12 @@ export default function TreatmentHero({ treatment, dictionary, locale }: Treatme
             >
               {dictionary.treatments.bookTreatment}
             </Link>
-          </motion.div>
+              </MotionWrapper>
+            </div>
           
           {/* Right column - Image */}
-          <motion.div variants={itemVariants}>
+            <div>
+              <MotionWrapper variants={itemVariants}>
             <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-xl">
               <Image
                 src={treatment.image}
@@ -84,8 +88,10 @@ export default function TreatmentHero({ treatment, dictionary, locale }: Treatme
                 className="object-cover"
               />
             </div>
-          </motion.div>
-        </motion.div>
+              </MotionWrapper>
+            </div>
+          </MotionWrapper>
+        </div>
       </div>
     </section>
   );

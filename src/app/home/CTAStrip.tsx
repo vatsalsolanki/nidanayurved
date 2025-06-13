@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Locale } from "@/lib/i18n";
 import { getLocalizedPath } from "@/lib/utils";
-import MotionWrapper from "@/components/ui/MotionWrapper";
+import { MotionWrapper } from "@/components/ui/MotionWrapper";
 
 interface CTAStripProps {
   dictionary: any;
@@ -57,8 +57,8 @@ export function CTAStrip({ dictionary, locale }: CTAStripProps) {
       </div>
       
       {/* Content container */}
+      <div className="container mx-auto px-4">
       <MotionWrapper 
-        className="container mx-auto px-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -66,7 +66,8 @@ export function CTAStrip({ dictionary, locale }: CTAStripProps) {
       >
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 relative z-10">
-            <MotionWrapper className="text-center md:text-left" variants={itemVariants}>
+              <div className="text-center md:text-left">
+                <MotionWrapper variants={itemVariants}>
               <h2 className={`text-2xl md:text-3xl font-bold text-white mb-2 font-${locale}`}>
                 {dictionary.home.ctaStrip?.title || "Ready to begin your healing journey?"}
               </h2>
@@ -74,11 +75,10 @@ export function CTAStrip({ dictionary, locale }: CTAStripProps) {
                 {dictionary.home.ctaStrip?.subtitle || "Schedule your consultation today and take the first step towards holistic wellness."}
               </p>
             </MotionWrapper>
-            
-            <MotionWrapper 
-              variants={itemVariants}
-              className="w-full md:w-auto"
-            >
+              </div>
+              
+              <div className="w-full md:w-auto">
+                <MotionWrapper variants={itemVariants}>
               <Link
                 href={getLocalizedPath("/book-appointment", locale)}
                 className="block text-center w-full md:w-auto px-8 py-4 rounded-lg bg-white text-primary font-medium shadow-lg transition-transform hover:scale-105 active:scale-95"
@@ -88,9 +88,11 @@ export function CTAStrip({ dictionary, locale }: CTAStripProps) {
                 </span>
               </Link>
             </MotionWrapper>
+              </div>
           </div>
         </div>
       </MotionWrapper>
+      </div>
     </section>
   );
 } 

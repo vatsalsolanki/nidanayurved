@@ -7,9 +7,4 @@ export default function HindiLayout({
 }) {
   // This locale parameter will be passed to the root layout
   return children;
-}
-
-// Export locale to be used by parent layouts
-export const params = {
-  locale: 'hi' as Locale
-}; 
+} 

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getLocalizedPath } from '@/lib/utils';
 import { Locale } from '@/lib/i18n';
 import { ArrowRight, HelpCircle } from 'lucide-react';
+import { MotionWrapper } from '@/components/ui/MotionWrapper';
 
 interface ConsultationCtaProps {
   dictionary: any;
@@ -55,43 +56,42 @@ export default function ConsultationCta({ dictionary, locale }: ConsultationCtaP
   return (
     <section className="py-12 md:py-16 bg-background">
       <div className="container mx-auto px-4">
-        <motion.div 
-          className="max-w-4xl mx-auto bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 md:p-8 shadow-md border border-gray-200 overflow-hidden relative"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {/* Decorative elements */}
-          <div className="absolute -right-12 -top-12 w-40 h-40 bg-primary/5 rounded-full blur-xl"></div>
-          <div className="absolute -left-12 -bottom-12 w-40 h-40 bg-secondary/5 rounded-full blur-xl"></div>
-          
-          <motion.div 
-            className="flex flex-col md:flex-row items-center text-center md:text-left gap-5 md:gap-8 relative z-10"
-            variants={itemVariants}
+        <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 md:p-8 shadow-md border border-gray-200 overflow-hidden relative">
+          <MotionWrapper 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
           >
-            <div className="w-16 h-16 rounded-full flex items-center justify-center bg-primary/10 shadow-sm flex-shrink-0 mx-auto md:mx-0">
-              <HelpCircle className="w-8 h-8 text-primary" />
+            {/* Decorative elements */}
+            <div className="absolute -right-12 -top-12 w-40 h-40 bg-primary/5 rounded-full blur-xl"></div>
+            <div className="absolute -left-12 -bottom-12 w-40 h-40 bg-secondary/5 rounded-full blur-xl"></div>
+            
+            <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-5 md:gap-8 relative z-10">
+              <MotionWrapper variants={itemVariants}>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center bg-primary/10 shadow-sm flex-shrink-0 mx-auto md:mx-0">
+                  <HelpCircle className="w-8 h-8 text-primary" />
+                </div>
+              </MotionWrapper>
+              <div className="flex-1">
+                <div className="text-xl md:text-2xl font-medium mb-4 text-primary">
+                  <MotionWrapper variants={itemVariants}>
+                    {content[locale].message}
+                  </MotionWrapper>
+                </div>
+                <MotionWrapper variants={itemVariants}>
+                  <Link 
+                    href={bookingUrl}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium shadow-md hover:bg-primary/90 transition-all duration-300 hover:gap-3"
+                  >
+                    <span>{content[locale].buttonText}</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </MotionWrapper>
+              </div>
             </div>
-            <div className="flex-1">
-              <motion.h3 
-                className="text-xl md:text-2xl font-medium mb-4 text-primary"
-                variants={itemVariants}
-              >
-                {content[locale].message}
-              </motion.h3>
-              <motion.div variants={itemVariants}>
-                <Link 
-                  href={bookingUrl}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium shadow-md hover:bg-primary/90 transition-all duration-300 hover:gap-3"
-                >
-                  <span>{content[locale].buttonText}</span>
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </motion.div>
-            </div>
-          </motion.div>
-        </motion.div>
+          </MotionWrapper>
+        </div>
       </div>
     </section>
   );

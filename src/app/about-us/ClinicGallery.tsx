@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Locale } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
-import MotionWrapper from '@/components/ui/MotionWrapper';
+import { MotionWrapper } from '@/components/ui/MotionWrapper';
 
 interface ClinicGalleryProps {
   dictionary: any;
@@ -112,20 +112,21 @@ export default function ClinicGallery({ dictionary, locale }: ClinicGalleryProps
   return (
     <section className="py-16 md:py-20 bg-accent/5">
       <div className="container mx-auto px-4">
-        <MotionWrapper
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className={cn("text-3xl md:text-4xl font-bold text-primary mb-3", fontClass)}>
-            {dictionary.about.clinicGallery.title}
-          </h2>
-          <p className={cn("text-lg max-w-3xl mx-auto text-text/80", fontClass)}>
-            {dictionary.about.clinicGallery.subtitle}
-          </p>
-        </MotionWrapper>
+        <div className="text-center mb-12">
+          <MotionWrapper
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className={cn("text-3xl md:text-4xl font-bold text-primary mb-3", fontClass)}>
+              {dictionary.about.clinicGallery.title}
+            </h2>
+            <p className={cn("text-lg max-w-3xl mx-auto text-text/80", fontClass)}>
+              {dictionary.about.clinicGallery.subtitle}
+            </p>
+          </MotionWrapper>
+        </div>
 
         {/* Video Preview - 16:9 aspect ratio */}
         <div className="mb-12 max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
@@ -170,41 +171,42 @@ export default function ClinicGallery({ dictionary, locale }: ClinicGalleryProps
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {galleryItems.filter(item => !item.isVideo).map((item) => (
-            <MotionWrapper
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: item.id * 0.1 }}
-            >
-              <div 
-                className="relative overflow-hidden rounded-xl shadow-md cursor-pointer group"
-                onClick={() => handleOpenLightbox(item)}
+            <div key={item.id}>
+              <MotionWrapper
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: item.id * 0.1 }}
               >
-                <div className="aspect-[4/3] relative">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-                  
-                  {imageError[item.id] ? (
-                    renderFallbackImage(item.translationKey)
-                  ) : (
-                    <Image
-                      src={item.imageSrc}
-                      alt={dictionary.about.clinicGallery[item.translationKey]}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      onError={() => handleImageError(item.id)}
-                    />
-                  )}
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10 bg-gradient-to-t from-black/70 to-transparent">
-                    <h3 className={cn("text-lg font-bold", fontClass)}>
-                      {dictionary.about.clinicGallery[item.translationKey]}
-                    </h3>
+                <div 
+                  className="relative overflow-hidden rounded-xl shadow-md cursor-pointer group"
+                  onClick={() => handleOpenLightbox(item)}
+                >
+                  <div className="aspect-[4/3] relative">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                    
+                    {imageError[item.id] ? (
+                      renderFallbackImage(item.translationKey)
+                    ) : (
+                      <Image
+                        src={item.imageSrc}
+                        alt={dictionary.about.clinicGallery[item.translationKey]}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        onError={() => handleImageError(item.id)}
+                      />
+                    )}
+                    
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10 bg-gradient-to-t from-black/70 to-transparent">
+                      <h3 className={cn("text-lg font-bold", fontClass)}>
+                        {dictionary.about.clinicGallery[item.translationKey]}
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </MotionWrapper>
+              </MotionWrapper>
+            </div>
           ))}
         </div>
       </div>

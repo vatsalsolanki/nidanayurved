@@ -9,6 +9,15 @@ import { TestimonialsSection } from "./home/TestimonialsSection";
 import { CTAStrip } from "./home/CTAStrip";
 import { FloatingCTA } from "@/components/FloatingCTA";
 
+// Define params type with proper Promise typing for Next.js 15
+type Params = Promise<{ locale?: string }>;
+type SearchParams = Promise<Record<string, string | string[] | undefined>>;
+
+type Props = {
+  params: Params;
+  searchParams: SearchParams;
+}
+
 export async function generateMetadata(): Promise<Metadata> {
   const dictionary = await getDictionary("en");
   
@@ -20,7 +29,8 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default async function Home() {
+export default async function Home({ params, searchParams }: Props) {
+  // No need to await params here since we're not using it
   const dictionary = await getDictionary("en");
   
   return (

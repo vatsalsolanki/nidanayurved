@@ -2,7 +2,7 @@
 
 import { Locale } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
-import MotionWrapper from '@/components/ui/MotionWrapper';
+import { MotionWrapper } from '@/components/ui/MotionWrapper';
 
 interface TrustSectionProps {
   dictionary: any;
@@ -67,71 +67,74 @@ export default function TrustSection({ dictionary, locale }: TrustSectionProps) 
   return (
     <section className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <MotionWrapper
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className={cn("text-3xl md:text-4xl font-bold text-primary mb-3", fontClass)}>
-            {content.title}
-          </h2>
-          <p className={cn("text-lg max-w-3xl mx-auto text-text/80", fontClass)}>
-            {content.subtitle}
-          </p>
-        </MotionWrapper>
+        <div className="text-center mb-12">
+          <MotionWrapper
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className={cn("text-3xl md:text-4xl font-bold text-primary mb-3", fontClass)}>
+              {content.title}
+            </h2>
+            <p className={cn("text-lg max-w-3xl mx-auto text-text/80", fontClass)}>
+              {content.subtitle}
+            </p>
+          </MotionWrapper>
+        </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {content.stats.map((stat: any, index: number) => (
-            <MotionWrapper
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="bg-accent/5 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center text-center h-full">
-                <div className="mb-4 p-3 rounded-full bg-primary/10">
-                  {statIcons[index as keyof typeof statIcons]}
+            <div key={index}>
+              <MotionWrapper
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="bg-accent/5 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center text-center h-full">
+                  <div className="mb-4 p-3 rounded-full bg-primary/10">
+                    {statIcons[index as keyof typeof statIcons]}
+                  </div>
+                  <h3 className={cn("text-4xl font-bold text-primary mb-2", fontClass)}>
+                    {stat.value}
+                  </h3>
+                  <h4 className={cn("text-xl font-semibold text-text mb-3", fontClass)}>
+                    {stat.label}
+                  </h4>
+                  <p className={cn("text-text/70 text-sm", fontClass)}>
+                    {stat.description}
+                  </p>
                 </div>
-                <h3 className={cn("text-4xl font-bold text-primary mb-2", fontClass)}>
-                  {stat.value}
-                </h3>
-                <h4 className={cn("text-xl font-semibold text-text mb-3", fontClass)}>
-                  {stat.label}
-                </h4>
-                <p className={cn("text-text/70 text-sm", fontClass)}>
-                  {stat.description}
-                </p>
-              </div>
-            </MotionWrapper>
+              </MotionWrapper>
+            </div>
           ))}
         </div>
 
         {/* Value Propositions */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {content.valueProps.map((prop: any, index: number) => (
-            <MotionWrapper
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="bg-white border border-primary/20 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center text-center h-full">
-                <div className="mb-4 p-3 rounded-full bg-primary/10">
-                  {valuePropIcons[index as keyof typeof valuePropIcons]}
+            <div key={index}>
+              <MotionWrapper
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="bg-white border border-primary/20 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center text-center h-full">
+                  <div className="mb-4 p-3 rounded-full bg-primary/10">
+                    {valuePropIcons[index as keyof typeof valuePropIcons]}
+                  </div>
+                  <h3 className={cn("text-xl font-bold text-primary mb-3", fontClass)}>
+                    {prop.title}
+                  </h3>
+                  <p className={cn("text-text/70", fontClass)}>
+                    {prop.description}
+                  </p>
                 </div>
-                <h3 className={cn("text-xl font-bold text-primary mb-3", fontClass)}>
-                  {prop.title}
-                </h3>
-                <p className={cn("text-text/70", fontClass)}>
-                  {prop.description}
-                </p>
-              </div>
-            </MotionWrapper>
+              </MotionWrapper>
+            </div>
           ))}
         </div>
       </div>

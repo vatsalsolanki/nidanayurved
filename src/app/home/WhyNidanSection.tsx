@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Locale } from "@/lib/i18n";
 import Image from "next/image";
+import { MotionWrapper } from "@/components/ui/MotionWrapper";
 
 // Animation variants
 const containerVariants = {
@@ -78,8 +79,8 @@ export function WhyNidanSection({ dictionary, locale }: WhyNidanSectionProps) {
         </div>
       </div>
       
-      <motion.div
-        className="container mx-auto px-4 md:px-6 relative z-10"
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <MotionWrapper
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -87,13 +88,11 @@ export function WhyNidanSection({ dictionary, locale }: WhyNidanSectionProps) {
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Content Column (7 columns on large screens) */}
-          <motion.div 
-            className="lg:col-span-7 order-2 lg:order-1"
-            variants={itemVariants}
-          >
+            <div className="lg:col-span-7 order-2 lg:order-1">
+              <MotionWrapper variants={itemVariants}>
             <div className="max-w-2xl">
+                  <div className="inline-block px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">
               <motion.div
-                className="inline-block px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4"
                 initial={{ opacity: 0, y: -10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -101,24 +100,18 @@ export function WhyNidanSection({ dictionary, locale }: WhyNidanSectionProps) {
               >
                 {dictionary.home.whyNidan?.subtitle || "Why Choose Nidan Ayurved"}
               </motion.div>
+                  </div>
               
               <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight font-${locale}`}>
                 {dictionary.home.whyNidan?.title || "Natural Healing, Rooted in Tradition"}
               </h2>
               
-              <motion.div
-                className="w-24 h-1 bg-accent mb-10 rounded-full"
-                initial={{ width: 0 }}
-                whileInView={{ width: 96 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-              ></motion.div>
+                  <div className="w-24 h-1 bg-accent mb-10 rounded-full motion-safe:animate-widthExpand"></div>
               
               <ul className="space-y-6">
                 {benefits.map((benefit, index) => (
-                  <motion.li 
-                    key={index}
-                    className="flex gap-4"
+                      <div key={index} className="flex gap-4">
+                        <MotionWrapper
                     variants={itemVariants}
                     custom={index}
                     whileHover={{ x: 5 }}
@@ -140,17 +133,17 @@ export function WhyNidanSection({ dictionary, locale }: WhyNidanSectionProps) {
                         {dictionary.home.whyNidan?.[`${benefit.key}Description`] || benefit.fallbackDescription}
                       </p>
                     </div>
-                  </motion.li>
+                        </MotionWrapper>
+                      </div>
                 ))}
               </ul>
+                </div>
+              </MotionWrapper>
             </div>
-          </motion.div>
           
           {/* Image Column (5 columns on large screens) */}
-          <motion.div 
-            className="lg:col-span-5 order-1 lg:order-2"
-            variants={itemVariants}
-          >
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <MotionWrapper variants={itemVariants}>
             <div className="relative">
               {/* Frame decoration */}
               <div className="absolute -inset-4 border-2 border-primary/20 rounded-2xl z-0 transform rotate-3"></div>
@@ -200,9 +193,11 @@ export function WhyNidanSection({ dictionary, locale }: WhyNidanSectionProps) {
               <div className="absolute -top-10 -left-10 w-20 h-20 rounded-full border-4 border-accent/20 z-0"></div>
               <div className="absolute -bottom-6 right-20 w-12 h-12 rounded-full bg-primary/20 z-0"></div>
             </div>
-          </motion.div>
+              </MotionWrapper>
+            </div>
+          </div>
+        </MotionWrapper>
         </div>
-      </motion.div>
     </section>
   );
 } 

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Locale } from "@/lib/i18n";
 import { getLocalizedPath } from "@/lib/utils";
-import MotionWrapper from "@/components/ui/MotionWrapper";
+import { MotionWrapper } from "@/components/ui/MotionWrapper";
 
 interface CTAStripProps {
   dictionary: any;
@@ -57,40 +57,42 @@ export default function CTAStrip({ dictionary, locale }: CTAStripProps) {
       </div>
       
       {/* Content container */}
-      <MotionWrapper 
-        className="container mx-auto px-4"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-      >
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 relative z-10">
-            <MotionWrapper className="text-center md:text-left" variants={itemVariants}>
-              <h2 className={`text-2xl md:text-3xl font-bold text-white mb-2 font-${locale}`}>
-                {dictionary.about.ctaStrip?.title || "Ready to experience Ayurvedic healing?"}
-              </h2>
-              <p className={`text-white/80 max-w-xl font-${locale}`}>
-                {dictionary.about.ctaStrip?.subtitle || "Discover personalized Ayurvedic treatments tailored to your unique constitution."}
-              </p>
-            </MotionWrapper>
-            
-            <MotionWrapper 
-              variants={itemVariants}
-              className="w-full md:w-auto"
-            >
-              <Link
-                href={getLocalizedPath("/contact", locale)}
-                className="block text-center w-full md:w-auto px-8 py-4 rounded-lg bg-white text-primary font-medium shadow-lg transition-transform hover:scale-105 active:scale-95"
-              >
-                <span className={`font-${locale}`}>
-                  {dictionary.about.ctaStrip?.button || "Contact Us Today"}
-                </span>
-              </Link>
-            </MotionWrapper>
+      <div className="container mx-auto px-4">
+        <MotionWrapper 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          <div className="max-w-5xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 relative z-10">
+              <div className="text-center md:text-left">
+                <MotionWrapper variants={itemVariants}>
+                  <h2 className={`text-2xl md:text-3xl font-bold text-white mb-2 font-${locale}`}>
+                    {dictionary.about.ctaStrip?.title || "Ready to experience Ayurvedic healing?"}
+                  </h2>
+                  <p className={`text-white/80 max-w-xl font-${locale}`}>
+                    {dictionary.about.ctaStrip?.subtitle || "Discover personalized Ayurvedic treatments tailored to your unique constitution."}
+                  </p>
+                </MotionWrapper>
+              </div>
+              
+              <div className="w-full md:w-auto">
+                <MotionWrapper variants={itemVariants}>
+                  <Link
+                    href={getLocalizedPath("/contact", locale)}
+                    className="block text-center w-full md:w-auto px-8 py-4 rounded-lg bg-white text-primary font-medium shadow-lg transition-transform hover:scale-105 active:scale-95"
+                  >
+                    <span className={`font-${locale}`}>
+                      {dictionary.about.ctaStrip?.button || "Contact Us Today"}
+                    </span>
+                  </Link>
+                </MotionWrapper>
+              </div>
+            </div>
           </div>
-        </div>
-      </MotionWrapper>
+        </MotionWrapper>
+      </div>
     </section>
   );
 } 

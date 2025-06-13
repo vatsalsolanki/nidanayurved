@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
+import { MotionWrapper } from '@/components/ui/MotionWrapper';
 
 interface TreatmentCtaProps {
   treatment: any;
@@ -27,8 +28,8 @@ export default function TreatmentCta({ treatment, dictionary, locale }: Treatmen
   return (
     <section className="py-16 md:py-20 bg-accent/5">
       <div className="container mx-auto px-4">
-        <motion.div
-          className="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-4xl mx-auto text-center"
+        <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-4xl mx-auto text-center">
+          <MotionWrapper
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -60,7 +61,8 @@ export default function TreatmentCta({ treatment, dictionary, locale }: Treatmen
               />
             </svg>
           </Link>
-        </motion.div>
+          </MotionWrapper>
+        </div>
       </div>
     </section>
   );

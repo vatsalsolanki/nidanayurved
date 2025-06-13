@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Locale } from '@/lib/i18n';
+import { MotionWrapper } from '@/components/ui/MotionWrapper';
 
 interface TreatmentDetailsProps {
   treatment: any;
@@ -34,28 +35,28 @@ export default function TreatmentDetails({ treatment, dictionary, locale }: Trea
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <motion.div
-          className="max-w-4xl mx-auto"
+        <div className="max-w-4xl mx-auto">
+          <MotionWrapper
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* Description */}
-          <motion.div className="mb-16" variants={itemVariants}>
+            <div className="mb-16">
+              <MotionWrapper variants={itemVariants}>
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
               {`${dictionary.common.about} ${treatment.title}`}
             </h2>
             <p className="text-text/80 text-lg leading-relaxed">
               {treatment.longDescription}
             </p>
-          </motion.div>
+              </MotionWrapper>
+            </div>
           
           {/* Symptoms and Benefits */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
-            variants={itemVariants}
-          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              <MotionWrapper variants={itemVariants}>
             {/* Symptoms */}
             <div className="bg-white p-8 rounded-xl shadow-md border border-neutral-100">
               <h3 className="text-xl font-semibold mb-6 text-primary">
@@ -70,7 +71,9 @@ export default function TreatmentDetails({ treatment, dictionary, locale }: Trea
                 ))}
               </ul>
             </div>
+              </MotionWrapper>
             
+              <MotionWrapper variants={itemVariants}>
             {/* Benefits */}
             <div className="bg-white p-8 rounded-xl shadow-md border border-neutral-100">
               <h3 className="text-xl font-semibold mb-6 text-primary">
@@ -85,10 +88,11 @@ export default function TreatmentDetails({ treatment, dictionary, locale }: Trea
                 ))}
               </ul>
             </div>
-          </motion.div>
+              </MotionWrapper>
+            </div>
           
           {/* Lifestyle Tips */}
-          <motion.div variants={itemVariants}>
+            <MotionWrapper variants={itemVariants}>
             <div className="bg-secondary/5 p-8 rounded-xl">
               <h3 className="text-xl font-semibold mb-6 text-primary">
                 {dictionary.treatments.lifestyleTitle}
@@ -104,8 +108,9 @@ export default function TreatmentDetails({ treatment, dictionary, locale }: Trea
                 ))}
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+            </MotionWrapper>
+          </MotionWrapper>
+        </div>
       </div>
     </section>
   );

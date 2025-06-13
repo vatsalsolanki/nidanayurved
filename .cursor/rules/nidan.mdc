@@ -1,0 +1,52 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Nidan Ayurved Website: Project Rules & Guidelines
+
+1. Multilingual Structure
+- Default language is English (/) — do not use /en in URLs.
+- Hindi (/hi/) and Gujarati (/gu/) are under their respective subpaths.
+- All text must use translation keys (never hardcoded), even in the default language.
+- All dynamic content (e.g., treatments) must be available in all languages via static JSON files.
+
+2. Directory & File Organization
+- Each page (static or dynamic) must have its own folder under /app/.
+- Section components for each page must be placed in their respective page folders (e.g., /app/about-us/AboutHero.tsx).
+- Dynamic treatment pages: Each treatment is a separate folder under /app/treatments/[slug]/ with its own components.
+
+3. Design & Theming
+- Use the provided color palette and font families for each language.
+- Fonts: Use next/font/google and apply via CSS variables based on the active locale.
+- Tailwind: Use the provided config for colors and font families.
+
+4. Animations
+- Use Framer Motion for all page transitions and key UI elements (e.g., cards, modals, section reveals).
+
+5. SEO & Metadata
+- Use generateMetadata() in every page to set localized meta tags (title, description, Open Graph, Twitter).
+- Ensure all metadata is language-specific.
+
+6. Header, Footer, and Navigation
+- Header and Footer must be fully multilingual and update links/content based on the active language.
+- Language Switcher: Must update the URL and UI language without redirecting English to /en.
+
+7. Forms
+- Use React Hook Form for all forms (e.g., contact, appointment).
+
+8. Responsiveness & Accessibility
+- All pages and components must be fully responsive and accessible (ARIA, keyboard navigation, etc.).
+
+9. Code Quality
+- No hardcoded text: Always use translation keys.
+- Clean, modular, and maintainable code.
+- No unused files or boilerplate.
+
+10. Deployment
+- The project must be ready for deployment on Cloudflare (no platform-specific code for Vercel/Netlify).
+
+Always check every new page, component, or feature against these rules before considering it complete.
+
+
+

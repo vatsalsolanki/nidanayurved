@@ -46,13 +46,31 @@ export function HeroSection({ dictionary, locale }: HeroSectionProps) {
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
         <motion.div 
-          className="absolute -top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
+          style={{
+            position: 'absolute',
+            top: '-5rem',
+            right: 0,
+            width: '24rem',
+            height: '24rem',
+            backgroundColor: 'rgba(var(--color-primary), 0.05)',
+            borderRadius: '9999px',
+            filter: 'blur(64px)'
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         />
         <motion.div 
-          className="absolute top-40 -left-20 w-72 h-72 bg-accent/5 rounded-full blur-3xl"
+          style={{
+            position: 'absolute',
+            top: '10rem',
+            left: '-5rem',
+            width: '18rem',
+            height: '18rem',
+            backgroundColor: 'rgba(var(--color-accent), 0.05)',
+            borderRadius: '9999px',
+            filter: 'blur(64px)'
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.2 }}
@@ -71,7 +89,15 @@ export function HeroSection({ dictionary, locale }: HeroSectionProps) {
       </div>
 
       <motion.div
-        className="container mx-auto px-4 md:px-6 relative z-10"
+        style={{
+          maxWidth: '1280px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: '1rem',
+          paddingRight: '1rem',
+          position: 'relative',
+          zIndex: 10
+        }}
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -81,18 +107,31 @@ export function HeroSection({ dictionary, locale }: HeroSectionProps) {
           {/* Content Section (7 columns on large screens) */}
           <div className="lg:col-span-7">
             <motion.div 
-              className="max-w-3xl"
+              style={{ maxWidth: '48rem' }}
               variants={itemVariants}
             >
               <motion.h1
-                className={`text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight font-${locale}`}
+                style={{ 
+                  fontSize: 'clamp(2.25rem, 5vw, 3.75rem)',
+                  fontWeight: 'bold',
+                  color: 'var(--color-primary)',
+                  marginBottom: '1.5rem',
+                  lineHeight: '1.2',
+                  fontFamily: `var(--font-${locale})`
+                }}
                 variants={itemVariants}
               >
                 {dictionary.home.hero.welcomeTitle}
               </motion.h1>
               
               <motion.p 
-                className={`text-neutral-700 text-lg md:text-xl mb-8 max-w-2xl font-${locale}`}
+                style={{ 
+                  color: '#374151',
+                  fontSize: 'clamp(1.125rem, 2vw, 1.25rem)',
+                  marginBottom: '2rem',
+                  maxWidth: '42rem',
+                  fontFamily: `var(--font-${locale})`
+                }}
                 variants={itemVariants}
               >
                 {dictionary.home.hero.welcomeSubtitle}
@@ -107,7 +146,13 @@ export function HeroSection({ dictionary, locale }: HeroSectionProps) {
           {/* Image Section (5 columns on large screens) */}
           <div className="lg:col-span-5 relative">
             <motion.div 
-              className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl"
+              style={{ 
+                position: 'relative',
+                height: 'clamp(300px, 30vw, 500px)',
+                borderRadius: '1rem',
+                overflow: 'hidden',
+                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+              }}
               variants={backgroundItemVariants}
             >
               {/* This would ideally be replaced with an actual image */}
@@ -129,7 +174,14 @@ export function HeroSection({ dictionary, locale }: HeroSectionProps) {
               
               {/* Decorative leaf elements */}
               <motion.div 
-                className="absolute -bottom-10 -right-10 w-48 h-48 opacity-20"
+                style={{
+                  position: 'absolute',
+                  bottom: '-2.5rem',
+                  right: '-2.5rem',
+                  width: '12rem',
+                  height: '12rem',
+                  opacity: 0.2
+                }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 0.2, y: 0 }}
                 transition={{ delay: 1, duration: 1 }}
@@ -140,7 +192,15 @@ export function HeroSection({ dictionary, locale }: HeroSectionProps) {
               </motion.div>
               
               <motion.div 
-                className="absolute -top-10 -left-10 w-48 h-48 opacity-20 transform rotate-45"
+                style={{
+                  position: 'absolute',
+                  top: '-2.5rem',
+                  left: '-2.5rem',
+                  width: '12rem',
+                  height: '12rem',
+                  opacity: 0.2,
+                  transform: 'rotate(45deg)'
+                }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 0.2, y: 0 }}
                 transition={{ delay: 1.2, duration: 1 }}
